@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1 Portfolio
+  p You're now at #{title}
+
+
+  script.
+    $(document).ready(function(){
+      $('#bs-example-navbar-collapse-1 a:contains("Portfolio")').parent().addClass("active");
+    });

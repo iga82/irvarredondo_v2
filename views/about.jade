@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 About
+  p You're now at #{title}
+
+  script.
+    // var html_link = $('#bs-example-navbar-collapse-1 a:contains("About")');
+    // $(html_link).parent().css("background-color", "red");
+    // $('#bs-example-navbar-collapse-1 a:contains("About")').css("background-color", "red");
+    // $('#bs-example-navbar-collapse-1 a:contains("About")').text("active");
+    $(document).ready(function(){
+      $('#bs-example-navbar-collapse-1 a:contains("About")').parent().addClass("active");
+    });
