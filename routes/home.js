@@ -14,4 +14,8 @@ router.get('/portfolio', function(req, res){
   res.render('portfolio', { title: 'Portfolio' });
 });
 
+router.get('/contact', function(req, res){
+  res.render('contact', { title: 'Contact' });
+});
+
 module.exports = router;

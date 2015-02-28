@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 Contact
+  p You're now at #{title}
+
+  script.
+    $(document).ready(function(){
+      var html_navbar_link = $('#bs-example-navbar-collapse-1 a:contains("Contact")');
+      $(html_navbar_link).parent().addClass("active");
+      $(html_navbar_link).append("<span class='sr-only'>(current)</span>");
+    });
