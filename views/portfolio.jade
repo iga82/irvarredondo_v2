@@ -7,5 +7,7 @@ block content
 
   script.
     $(document).ready(function(){
-      $('#bs-example-navbar-collapse-1 a:contains("Portfolio")').parent().addClass("active");
+      var html_navbar_link = $('#bs-example-navbar-collapse-1 a:contains("Portfolio")');
+      $(html_navbar_link).parent().addClass("active");
+      $(html_navbar_link).append("<span class='sr-only'>(current)</span>");
     });
