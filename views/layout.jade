@@ -11,7 +11,7 @@ html
 
   body
     // BEGIN NAVBAR
-    nav.navbar.navbar-default
+    nav.navbar.navbar-default.navbar-fixed-top
       div.container-fluid
         // Brand and toggle get grouped for better mobile display
         div.navbar-header
@@ -36,6 +36,9 @@ html
             | 
             li
               a(href='/contact') Contact
+            | 
+            li
+              a(href='https://dl.dropboxusercontent.com/u/94217607/resume.pdf', target="blank") Resume
     // END NAVBAR
     
     block content
