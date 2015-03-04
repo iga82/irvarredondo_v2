@@ -1,8 +1,28 @@
 extends layout
 
 block content
-  h1 Contact
-  p You're now at #{title}
+
+  div.text-center
+    h1 Irving Gabino Arredondo
+    h2 210 - 347 - 7593
+    h2
+      a(href="mailto:irva91@gmail.com") irva91@gmail.com
+
+  div.container.top-buffer
+    div.row
+      div.col-md-1.col-md-offset-4
+        a(href="https://www.facebook.com/irving.arredondo" target="_blank")
+          img(src="/images/contact_icons/facebook.jpg" class="media-object center-block")      
+      div.col-md-1
+        a(href="https://github.com/iga82" target="_blank")
+          img(src="/images/contact_icons/github.jpeg" class="media-object center-block")
+      div.col-md-1
+        a(href="https://www.linkedin.com/in/irvingarredondo" target="_blank")
+          img(src="/images/contact_icons/linkedin.png" class="media-object center-block")
+      div.col-md-1
+        a(href="https://twitter.com/irva91" target="_blank")
+          img(src="/images/contact_icons/twitter.png" class="media-object center-block")
+
 
   script.
     $(document).ready(function(){

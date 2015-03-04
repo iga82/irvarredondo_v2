@@ -36,12 +36,12 @@ block content
               h4 Version 1
             | This is the first version of my website that is still being hosted by the google app engine.
             | The original design looked like the following
-            ul
-              li
+            ul(style="max-width: 300px;").list-group.center-block.text-center
+              li.list-group-item
                 a(href="https://dl.dropboxusercontent.com/u/94217607/oldDesign/home.pdf" target="_blank") Home
-              li
+              li.list-group-item
                 a(href="https://dl.dropboxusercontent.com/u/94217607/oldDesign/contact.pdf" target="_blank") Contact
-              li
+              li.list-group-item
                 a(href="https://dl.dropboxusercontent.com/u/94217607/oldDesign/portfolio.pdf" target="_blank") Portfolio  
             | It was update to use Twitter Bootstrap v2, giving it a more simple design with graphics designed by
             | a friend. Code for the website can be found at this 
@@ -70,15 +70,16 @@ block content
     div.row
       div.panel.panel-danger.top-buffer
         div.panel-heading
-          h3.panel-title
-          | 
-          a(href="https://fast-ravine-4145.herokuapp.com/" target="_blank") Lift Buddy
+          h3.panel-title Lift Buddy
         div.panel-body
-          | 
-          p Panel Content
-        div.panel-body
-          | 
-          p More Content
+          p 
+          | Life Buddy is an Android application that seeks to solve the problem of the lack of a workout app
+          | on Android that has a simple user interface. I'm creating the app with two co-workers, one with 
+          | Android experience and the other with backend experience. We've tried and installed multiple workout apps, 
+          | and have not found anything that lives to the UI experience that an iOS app provides. We have finished
+          | the Android UI, but have run into problems trying to save the workout logs to a cloud storage. We've
+          | just discovered Couchbase, which seems to handle our use case. Our current efforts are dedicated to
+          | building our Couchbase server through Node JS. The Git repo is currently private.
 
   script.
     $(document).ready(function(){
