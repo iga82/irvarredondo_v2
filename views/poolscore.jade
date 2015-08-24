@@ -6,6 +6,9 @@ block content
     div(style="padding-top: 10px;").row
       div.col-md-12
         button(id="newGame" type="submit" class="btn btn-default") New Game
+    div(style="padding-top: 10px;").row
+      div.col-md-12
+        input(id="password" type="password" placeholder="Password").center-block
     div(style="padding-top: 50px;").row
       div.col-md-6
         h1.text-center Irving
@@ -20,7 +23,6 @@ block content
   script.
     Parse.initialize("khs9Kotg2tI6PFaKNpCV1GyIdYBrBBASppPre0mP", "gbmQ0UugkjEUU7rVSFCM0lJP4LPCIKwq6HlvTOCN");
 
-    //- var myId = "Q5Rw1MWVAe";
     var query = new Parse.Query("Score");
     query.find({
       success: function(results) {
@@ -38,23 +40,6 @@ block content
       }
     });
 
-
-
-    //- var query = new Parse.Query("Score");
-    //- query.get(myId, {
-    //-   success: function(object) {
-    //-     // object is an instance of Parse.Object.
-    //-     var player1_score = object.get("irving");
-    //-     var player2_score = object.get("jonathan");
-    //-     $("#irvScore").text(player1_score);
-    //-     $("#jonScore").text(player2_score);
-    //-   },
-
-    //-   error: function(object, error) {
-    //-     console.log("Could not find class.")
-    //-   }
-    //- });
-
     $("#newGame").click(function(){
         var Score = Parse.Object.extend("Score");
         var score = new Score();
@@ -69,41 +54,49 @@ block content
     });
 
     $("#irvButton").click(function(){
-      var myId = "Q5Rw1MWVAe";
+      var pass_value = $("#password").val();
+      if(pass_value !== "hello"){
+        alert("wrong password");
+        return;
+      }
       var query = new Parse.Query("Score");
-      query.get(myId, {
-        success: function(object) {
-          // object is an instance of Parse.Object.
-          var playerScore = object.get("irving");
-          var playerScore = playerScore + 1;
-          $("#irvScore").text(playerScore);
-
+      query.find({
+        success: function(results) {
+          // get the Score object
+          var object = results[0];
+          // update the headers with the correct score
+          var player_score = object.get("irving");
+          $("#irvScore").text(player_score + 1);
           object.increment("irving", 1);
           object.save();
         },
 
-        error: function(object, error) {
-          alert("Error");
+        error: function(error) {
+          console.log("Could not find class.")
         }
       });
+
     });
 
     $("#jonButton").click(function(){
-      var myId = "Q5Rw1MWVAe";
+      var pass_value = $("#password").val();
+      if(pass_value !== "hello"){
+        alert("wrong password");
+        return;
+      }
       var query = new Parse.Query("Score");
-      query.get(myId, {
-        success: function(object) {
-          // object is an instance of Parse.Object.
-          var playerScore = object.get("jonathan");
-          var playerScore = playerScore + 1;
-          $("#jonScore").text(playerScore);
-
+      query.find({
+        success: function(results) {
+          // get the Score object
+          var object = results[0];
+          // update the headers with the correct score
+          var player_score = object.get("jonathan");
+          $("#irvScore").text(player_score + 1);
           object.increment("jonathan", 1);
           object.save();
         },
-
-        error: function(object, error) {
-          alert("Error");
+        error: function(error) {
+          console.log("Could not find class.")
         }
       });
     });
