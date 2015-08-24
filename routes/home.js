@@ -18,4 +18,8 @@ router.get('/contact', function(req, res){
   res.render('contact', { title: 'Contact' });
 });
 
+router.get('/poolscore', function(req, res){
+  res.render('poolscore', { title: 'Pool Score'});
+});
+
 module.exports = router;
