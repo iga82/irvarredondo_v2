@@ -5,23 +5,24 @@
 {{> _head}}
 
 <body>
-    {{!-- grab navbar partial --}}
-    {{> _navbar}}
+    <div class="container someDivOverlay" style="width: 100%;">
+        {{!-- grab navbar partial --}}
+        {{> _navbar}}
 
-    {{!-- home --}}
-    <div id="home-div">
-            <img src="/images/irvingHome.png" class="img-responsive center-block">
+        {{!-- home --}}
+        <div id="home-div">
+                <img src="/images/irvingHome.png" class="img-responsive center-block">
+        </div>
+
+        {{!-- about partial --}}
+        {{> _about}}
+
+        {{!-- portfolio partial --}}
+        {{> _portfolio}}
+
+        {{!-- contact partial --}}
+        {{> _contact}}
     </div>
-
-    {{!-- about partial --}}
-    {{> _about}}
-
-    {{!-- portfolio partial --}}
-    {{> _portfolio}}
-
-    {{!-- contact partial --}}
-    {{> _contact}}
-
 </body>
 
 </html>

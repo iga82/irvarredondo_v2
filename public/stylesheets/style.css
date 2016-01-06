@@ -1,6 +1,15 @@
 body {
+  background: url(../images/austin.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.someDivOverlay {
+   background: rgba(70, 72, 82, 0.3)
 }
 
 a {
