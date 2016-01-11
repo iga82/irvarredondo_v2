@@ -1,5 +1,5 @@
 body {
-  background: url(../images/austin.jpg) no-repeat center center fixed; 
+  background: url(../images/mopac.png) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -9,7 +9,10 @@ body {
 }
 
 .someDivOverlay {
-   background: rgba(70, 72, 82, 0.3)
+   position: absolute;
+   left: 0;
+   right: 0;
+   background: rgba(70, 72, 82, 0.5)
 }
 
 a {
@@ -18,4 +21,13 @@ a {
 
 .top-buffer{
   margin-top: 20px;
+}
+
+#profile-img{
+    border:5px solid white;
+    border-radius: 500px;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+   height: 200px;
+   width: 200px;
 }

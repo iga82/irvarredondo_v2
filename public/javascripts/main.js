@@ -1,5 +1,8 @@
 // document ready
 $(function(){
+	// fade in profile picture
+	$("#home-div").fadeIn(3000);
+
 	// about-link
 	$('#about-link').click(function(){
 		$('#about-div').show();

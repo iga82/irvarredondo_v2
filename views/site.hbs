@@ -5,13 +5,13 @@
 {{> _head}}
 
 <body>
-    <div class="container someDivOverlay" style="width: 100%;">
+    <div>
         {{!-- grab navbar partial --}}
-        {{> _navbar}}
+        {{!-- {{> _navbar}} --}}
 
         {{!-- home --}}
-        <div id="home-div">
-                <img src="/images/irvingHome.png" class="img-responsive center-block">
+        <div id="home-div" style="display: none;">
+                <img src="/images/profile.png" id="profile-img" class="img-responsive center-block">
         </div>
 
         {{!-- about partial --}}
