@@ -41,4 +41,15 @@ $(function(){
 			$("#links-div-small").fadeIn(500);
 		}
 	});
+
+    $(".large-image")
+        .mouseover(function() {
+        	var src = $(this).attr("src").match(/[^\.]+/) + "-alt.png";
+            $(this).attr("src", src);
+        })
+        .mouseout(function() {
+        	var src = $(this).attr("src").replace("-alt.png", ".png");
+            $(this).attr("src", src);
+        });
+
 });
