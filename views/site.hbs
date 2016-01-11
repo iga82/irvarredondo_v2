@@ -6,22 +6,57 @@
 
 <body>
     <div>
-        {{!-- grab navbar partial --}}
-        {{!-- {{> _navbar}} --}}
-
-        {{!-- home --}}
+        
         <div id="home-div" style="display: none;">
                 <img src="/images/profile.png" id="profile-img" class="img-responsive center-block">
         </div>
 
-        {{!-- about partial --}}
-        {{> _about}}
+        <div class="fade-in-after-profile" style="padding-top: 80px; display: none;" id="about-div">
+            <div class="container center-block" style="max-width: 900px;" id="profile-intro">
+                <div class="row">
+                    <h3>Irving Arredondo. Basketball enthusiast. Music connoisseur. Software Engineer.</h3>
+                </div>
+            </div>
+        </div>
 
-        {{!-- portfolio partial --}}
-        {{> _portfolio}}
+        <div class="fade-in-after-profile" id="links-div" style="display: none; padding-top: 40px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-1 col-md-offset-4">
+                        <a href="https://github.com/iga82" target="_blank">
+                            <img src="/images/contact/github.png" class="img-responsive center-block">
+                        </a>
+                    </div>
+                    <div class="col-md-1">
+                        <a href="https://www.linkedin.com/in/irvingarredondo" target="_blank">
+                            <img src="/images/contact/linkedin.png" class="img-responsive center-block">
+                        </a>
+                    </div>
+                    <div class="col-md-1">
+                        <a href="https://twitter.com/irva91" target="_blank">
+                            <img src="/images/contact/twitter.png" class="img-responsive center-block">
+                        </a>
+                    </div>
+                    <div class="col-md-1">
+                        <a href="mailto:irva91@gmail.com">
+                            <img src="/images/contact/email.png" class="img-responsive center-block">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        {{!-- contact partial --}}
-        {{> _contact}}
+        <div class="center-block text-center fade-in-after-profile" style="display: none; padding-top: 20px;">
+            <div class="container">
+                <div class="row">
+                    <nav class="cl-effect-7">
+                        <a href="https://dl.dropboxusercontent.com/u/94217607/resume.pdf" target="_blank">Resume</a>
+                        <a href="https://fast-ravine-4145.herokuapp.com/" target="_blank">Macro Buddy</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
     </div>
 </body>
 
