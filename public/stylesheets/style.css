@@ -1,5 +1,5 @@
 body {
-  background: url(../images/mopac.png) no-repeat center center fixed; 
+  background: url(../images/mopac.png) center top no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -8,19 +8,8 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-.someDivOverlay {
-   position: absolute;
-   left: 0;
-   right: 0;
-   background: rgba(70, 72, 82, 0.5)
-}
-
 a {
   color: #00B7FF;
-}
-
-.top-buffer{
-  margin-top: 20px;
 }
 
 #profile-img{
